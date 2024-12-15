@@ -18,7 +18,7 @@ We're not responsible for the misuse of this tool. Be careful.
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/t3stc4ch3.git
+   git clone https://github.com/pad1ryoshi/t3stc4ch3.git
    cd t3stc4ch3
    ```
 
