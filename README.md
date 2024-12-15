@@ -1,18 +1,16 @@
 # t3stc4ch3
 
-`t3stc4ch3.py` is a tool designed to test if URLs are being cached and perform brute force on possible unkeyed headers.
+`t3stc4ch3.py` is a tool designed to test if URLs are being cached.
 
 ## Disclaimer
 We're not responsible for the misuse of this tool. Be careful.
 
 ## Screenshot
-![image](https://github.com/user-attachments/assets/e91c3a17-1e71-4de2-a986-47c3615c9f0d)
-
-
+![image](https://github.com/user-attachments/assets/70aec2de-0ffb-43af-adb7-0c620bade422)
 
 ## Features
-- **check_cache**: Verify if caching mechanisms are present for a given list of URLs.
-- **check_headers**: Test a variety of HTTP headers to identify their impact on caching behavior and detect potential unkeyed headers.
+- **Checking cache**: Verify if caching mechanisms are present for a given list of URLs.
+- **Exclude Results**: Option to exclude results based on status codes.
 
 ## Installation
 
@@ -33,48 +31,31 @@ We're not responsible for the misuse of this tool. Be careful.
    https://shopify.com
    https://att.com
    ```
-
-2. For checking headers, create a file containing the list of headers (e.g., headers.txt):
-    ```
-    x-forwarded-scheme
-    x-forwarded-host
-    x-forwarded-proto
-    x-http-method-override
-    x-amz-website-redirect-location
-    authorization
-    x-rewrite-url
-    x-host
-    user-agent
-    handle
-    x-original-url
-    x-original-host
-    x-forwarded-prefix
-    x-amz-server-side-encryption
-    trailer
-    fastly-ssl
-    fastly-host
-    fastly-ff
-    fastly-client-ip
-    content-type
-    api-version
-    acunetix-header
-    accept-version
-    ```
-3. Run the tool:
-  - To check cache:
+   
+2. Run the tool:
+   - To open the menu help:
      ```
-     python t3stc4ch3.py -u urls.txt -f check_cache
+     python t3stc4ch3.py -h
      ```
-  - To check headers:
-    ```
-    python t3stc4ch3.py -u urls.txt -w headers.txt -f check_headers
-    ```
+   - To check cache:
+     ```
+     python t3stc4ch3.py -u urls.txt
+     ```
+   - To check cache and save the results to a file:
+     ```
+     python t3stc4ch3.py -u urls.txt -o resuls.txt
+     ```
+   - To check cache and exclude certain status code:
+     ```
+     python t3stc4ch3.py -u urls.txt -sc 404 500
+     ```
 
 ## Requirements
 
   - requests
   - argparse
   - colorama
+  - urllib3
 
 ## License
 
